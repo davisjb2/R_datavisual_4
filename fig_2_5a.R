@@ -1,0 +1,6 @@
+library(MASS)
+args <- commandArgs()
+df <- read.table(args[6],header=T,sep=",")
+png(filename=args[7])
+parcoord(df[1:4], col=iris$Species,var.label="T")
+dev.off()
